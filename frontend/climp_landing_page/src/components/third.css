@@ -1,0 +1,50 @@
+.thirdS{
+display: flex;
+justify-content:space-around;
+}
+
+.image_sec{
+    width: 50%;
+}
+.image2{
+  height: 700px;
+}
+
+.heading1{
+  font-size: 70px;
+  color: #2a3346;
+  padding: 20px;
+}
+
+.para_sec{
+  width: 50%;
+  text-align: center;
+}
+.paragraph{
+  margin: auto;
+  padding-top: 50px;
+  width: 500px;
+  text-align: left;
+  font-size: 20px;
+}
+
+span{
+  text-decoration: underline;
+  color: blue;
+} 
+.button_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+/* <div className='thirdS'>
+        <div>
+            <img className='image2' src={image2} alt="" />
+        </div>
+        <div>
+          <h1 className='heading1'>Automate your business. Deepen your human interactions.</h1>
+          <p className='paragraph'>The Climp.co Platform can handle volumes of tedious, time-consuming phone calls with super-human accuracy and easy-to-track updates. Simply set the task and get back to the customer interactions that really matter.</p>
+          <button className='button-21'>Get Started</button> <span >Request Demo</span>
+        </div>
+    </div> */

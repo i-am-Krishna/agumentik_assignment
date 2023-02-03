@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+background-color: #082976;
+width: 100%;
+height: auto;
+padding: 20px;
+}
+
+.footer_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.button22{
+width: 100px;
+}
+
+.lower_section{
+    display: flex;
+    justify-content: space-around;
+} 
+li{
+    color: white;
+    list-style-type:none ;
+    padding: 3px;
+}
+.pd{
+padding-bottom: 20px;
+}

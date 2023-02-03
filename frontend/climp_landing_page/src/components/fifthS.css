@@ -1,0 +1,58 @@
+.section_f{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.first_part{
+    width: 50%;
+
+}
+.heading_f{
+    font-size: 60px;
+    color: grey;
+    width: 400px;
+}
+ 
+.heading_2{
+    color: rgb(48, 48, 48);
+    max-width: 500px;
+    padding-top: 30px;
+}
+.paragraph_data{
+    width: 500px;
+    text-align: left;
+    margin-top: 30px;
+} 
+.second_part{
+width: 50%;
+padding-top: 300px;
+display: flex;
+flex-direction: column;
+
+}
+.second_part > div {
+    display: flex;
+}
+ 
+.image_on_second{
+width: 200px;
+height: 200px;
+}
+.paragraph_data2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.paragraph_data2>h4{
+text-align: left;
+color: rgb(60, 60, 59);
+
+}
+.paragraph_data2 > p{
+    text-align: left;
+}

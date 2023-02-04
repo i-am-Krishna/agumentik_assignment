@@ -22,29 +22,29 @@ const Auth = () => {
     }))
   } 
 
-//   const sendRequest= async(type="login")=>{
-//     let res = axios.post(`https://blog-backend-sigma.vercel.app/api/user/${type}`,{name:data.name,email:data.email,
-//    password:data.password}).catch((err)=>console.log(err));
-//    let newdata = await res;
-//    return newdata.data;
-//    }
-
-// handleSubmit=(e)=>{
-//     e.preventDefault();
-//     if(isSignup){
-//       sendRequest("signup").then((data) => localStorage.setItem("userId",data.user._id)).then(()=>dispatch(authAction.login())).then(()=>navigate("/")) 
-//     }
-//     else{
-//       sendRequest().then((data) => localStorage.setItem("userId",data.user._id)).then(()=>dispatch(authAction.login())).then(()=>navigate("/")) 
-//     }
+  const sendRequest= async(type="login")=>{
+    let res = axios.post(`https://agumentic-backend.vercel.app/api/auth/${type}`,{name:data.name,email:data.email,
+   password:data.password}).catch((err)=>console.log(err));
+   let newdata = await res;
+   console.log(newdata)
+   return newdata.data;
+   }
+   const handleSubmit=(e)=>{
+    e.preventDefault();
+    if(isSignup){
+      sendRequest("register").then((data) => localStorage.setItem("userId",data.user._id)).then(()=>navigate("/admin")) 
+    }
+    else{
+      sendRequest().then((data) => localStorage.setItem("userId",data.user._id)).then(()=>navigate("/admin")) 
+    }
   
-//   }
+  }
    
 
-const handleSubmit=(e)=>{
-    e.preventDefault();
- console.log(data)
-}
+// const handleSubmit=(e)=>{
+//     e.preventDefault();
+//  console.log(data)
+// }
 
 
 // console.log(data)

@@ -1,12 +1,28 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import './seconds.css'
 
 const SecondS = () => {
+
+  const [data,setData] = useState([])
+  const getRequest=async()=>{
+    let res = await axios.get("https://agumentic-backend.vercel.app/api/admin")
+    let newData = res.data;
+    setData(newData)
+  }
+  useEffect(()=>{
+    if(data.length === 0){
+      getRequest()
+    }
+  },[data])
+  
+
+
   return (
     <div className='secondS'>       
      <div className='section1'>
-      <div><h1>What is Climp?</h1>
-      <p>This week, we're excited to be featuring Conal Sathi. Conal has been building the computer brains that drive the conversations that the infinitus digital assistant has. From rule based systems to self-learing models, Conal has been pulling out all stops to make sure our customers are getting the most out of thier Infinitus experience.</p>
+      <div><h1>{data ? data?.secondHeading : "What is Climp?"}</h1>
+      <p>{data ? data?.secondPara : "This week, we're excited to be featuring Conal Sathi. Conal has been building the computer brains that drive the conversations that the infinitus digital assistant has. From rule based systems to self-learing models, Conal has been pulling out all stops to make sure our customers are getting the most out of thier Infinitus experience."}</p>
       <br />
       <p>Julian is a two time enterpreneur and thrives in early-stage companies that are figuring things out. He has also previously worked at Google and YouTube where he led the redesign.</p>
 

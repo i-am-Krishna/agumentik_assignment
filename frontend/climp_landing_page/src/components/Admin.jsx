@@ -1,10 +1,13 @@
 import { Button, FormLabel, TextField, Typography} from '@mui/material';
 import { Box } from '@mui/system';
+import axios from 'axios';
 
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './admin.css'
 
 const Admin = () => {
+  const navigate = useNavigate();
   const [data,setData] = useState({
     firstHeading:'',
     firstPara:'',
@@ -35,9 +38,10 @@ const Admin = () => {
       [name]:value
     })
   }
-  const handleSubmit=(e)=>{
+  const handleSubmit= (e)=>{
     e.preventDefault();
-    console.log(data)
+    axios.post('https://agumentic-backend.vercel.app/api/admin',data).then((res)=>alert("Successfully Saved")).then((res)=>navigate("/"))
+
   }
 
 

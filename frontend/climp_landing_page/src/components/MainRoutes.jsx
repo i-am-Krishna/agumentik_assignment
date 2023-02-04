@@ -7,15 +7,18 @@ import Main from './Main';
 import Pricing from './Pricing';
 import Works from './Works';
 import Auth from './Auth';
+import PrivateAuth from './PrivateRoute';
 
 const MainRoutes = () => {
   return (
     <Routes>
         <Route path='/' element={<Main/>}/>
-        <Route path='/auth' element={<Auth/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/bussiness' element={<Bussiness/>}/>
-        <Route path='/admin' element={<Admin/>}/>
+        
+          <Route path='/admin' element={<PrivateAuth><Admin/></PrivateAuth> }/> 
+           <Route path='/auth' element={<Auth/>}/>
+        
         <Route path='/pricing' element={<Pricing/>}/>
         <Route path='/works' element={<Works/>}/>
     </Routes>

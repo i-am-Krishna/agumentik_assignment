@@ -11,7 +11,8 @@ adminRouter.get("/",async(req,res)=>{
         console.log(err)
         return res.status(404).json({message:"something went wrong"})
     }
-    res.status(200).json(data);
+    let singleData = data[data.length -1]
+    res.status(200).json(singleData);
 })
 
 adminRouter.post("/",async(req,res)=>{
